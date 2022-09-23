@@ -1,21 +1,29 @@
 const fs = require('fs');
+const colors = require('colors');
 
-
-const crearArchivo = async( base = 5 ) => {
+const crearArchivo = async( base = 5, listar = false, hasta = 10 ) => {
     
     try {
-        console.log("==============");
-        console.log("Tabla del:", base);
-        console.log("==============");
-
+        
         let salida = '';
-
-        for( let i = 1; i <= 10 ; i++ ) {
+        
+        for( let i = 1; i <= hasta ; i++ ) {
             salida += `${ base } x ${ i } = ${ base * i }\n`;
+            
         }
+        if( listar ) {
+            
+            console.log("==============".blue);
+            console.log("Tabla del:".yellow, colors.yellow ( base ));
+            console.log("==============".blue);
+            console.log(salida);
+        
+        }
+        //imprime esto en la consola si se lo requiere con -l
 
 
-        fs.writeFileSync( `tabla-${ base }.txt`, salida, );
+
+        fs.writeFileSync( `./salida/tabla-${ base }.txt`, salida, );
             
         // en vez de console.log se suele utilizar resolve
         // y si se utiliza async como promesa, el console.log se remplaza usando 'return'

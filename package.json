@@ -1,0 +1,25 @@
+{
+  "name": "inicio",
+  "version": "0.0.1",
+  "description": "Es una tabla de multiplicar con texto",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "inicio1": "node app --inicio=1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Franchesco44/Usando-Async-try-y-catch.git"
+  },
+  "author": "Francisco Toledo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Franchesco44/Usando-Async-try-y-catch/issues"
+  },
+  "homepage": "https://github.com/Franchesco44/Usando-Async-try-y-catch#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "nodemon": "^2.0.20",
+    "yargs": "^17.5.1"
+  }
+}
